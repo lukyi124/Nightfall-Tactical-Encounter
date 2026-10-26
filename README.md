@@ -18,6 +18,12 @@ This is a **technical portfolio showcase**, not a downloadable, complete Unreal 
 
 ## Gameplay footage
 
+
+
+https://github.com/user-attachments/assets/da274885-5e39-4f14-bd76-713b6dec4da6
+
+
+
 **Animated preview (5 seconds, muted):**
 
 ![Nightfall gameplay animated preview](media/nightfall-gameplay-preview.gif)
