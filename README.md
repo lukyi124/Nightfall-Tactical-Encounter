@@ -20,21 +20,17 @@ This is a **technical portfolio showcase**, not a downloadable, complete Unreal 
 
 
 
+
+## Gameplay footage
+
+**Full gameplay showcase — 36.5 seconds, with audio**
+
 https://github.com/user-attachments/assets/da274885-5e39-4f14-bd76-713b6dec4da6
 
+The gameplay demonstration includes exploration, enemy encounters, character movement, aiming, shooting, and barn traversal.
 
+**[Download gameplay MP4](media/nightfall-gameplay-highlights.mp4)**
 
-**Animated preview (5 seconds, muted):**
-
-![Nightfall gameplay animated preview](media/nightfall-gameplay-preview.gif)
-
-**Full gameplay video (36.5 seconds, with audio):**
-
-<!-- IMPORTANT: Paste the URL created by GitHub when you upload the compressed MP4 in its editor here, alone on its own line. It should begin with https://github.com/user-attachments/assets/ . Do not wrap it in Markdown link syntax. -->
-
-**[▶ Open or download the MP4](media/nightfall-gameplay-highlights.mp4)**
-
-The video includes exploration, enemy encounters, movement, aiming, shooting, and traversal through the barn. The animated preview plays without sound; the full MP4 includes audio.
 
 ## Gameplay and technical systems
 
