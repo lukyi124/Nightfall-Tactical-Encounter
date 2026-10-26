@@ -1,69 +1,79 @@
 # NIGHTFALL: TACTICAL ENCOUNTER
 
-**A Third-Person Combat & Enemy AI Prototype — Unreal Engine 5**
+**Third-Person Combat & Enemy AI Prototype | Unreal Engine 5**
 
 *Blueprint gameplay · Animation Blueprints · Behaviour Trees · AI Perception · Camera-based shooting*
 
 ![Nightfall player character standing in front of the barn](screenshots/01-barn-character.jpg)
 
-**[▶ Watch or download the 36-second gameplay highlights (MP4)](https://raw.githubusercontent.com/lukyi124/Nightfall-Tactical-Encounter/main/media/nightfall-gameplay-highlights.mp4)** | [More gameplay screenshots](screenshots/)
+**[▶ Gameplay highlights (36.5 seconds)](#gameplay-footage)** · [Screenshots](#selected-gameplay-screenshots) · [Technical systems](#gameplay-and-technical-systems)
 
 ## About the project
 
-**Nightfall: Tactical Encounter** is a personal gameplay systems prototype built with Unreal Engine 5. The player explores a night-time barn environment, aims a pistol in third person and encounters enemy AI that patrols and pursues the player. Shots are evaluated using camera-based line traces and can damage and eliminate enemies.
+**Nightfall: Tactical Encounter** is a personal gameplay systems prototype developed in Unreal Engine 5. The player explores a nighttime barn environment, aims a pistol in third person, and encounters enemy AI that patrols the area and pursues the player when detected. Camera-based line traces register shots, apply damage, and allow enemies to be eliminated.
 
-My focus was to **learn how to build and connect gameplay systems in Blueprints**—not to create the third-party character model or environment art from scratch. This repository is a **portfolio showcase and technical breakdown**, not a downloadable complete Unreal project.
+The goal was to **learn and integrate gameplay systems using Blueprints**: character animation, AI behavior, hit detection, aiming, and UI. The character and environment art come from third-party assets; my work focuses on gameplay logic, implementation, integration, and testing.
 
-The internal Unreal project was developed under the working name `Animation_Prototype`; only the public portfolio title was changed.
+This is a **technical portfolio showcase**, not a downloadable, complete Unreal Engine project. The local project was developed under the working title `Animation_Prototype`.
 
 ## Gameplay footage
 
-[![Gameplay preview - third-person encounter](screenshots/06-enemy-engagement.jpg)](https://raw.githubusercontent.com/lukyi124/Nightfall-Tactical-Encounter/main/media/nightfall-gameplay-highlights.mp4)
+**Animated preview (5 seconds, muted):**
 
-**[▶ Open the edited gameplay video (MP4, 36.5 seconds)](https://raw.githubusercontent.com/lukyi124/Nightfall-Tactical-Encounter/main/media/nightfall-gameplay-highlights.mp4)**
+![Nightfall gameplay animated preview](media/nightfall-gameplay-preview.gif)
 
-The gameplay highlights feature the environment, enemy encounters, movement, aiming, shooting, and barn traversal. Depending on your browser, the video may play directly or download as an MP4 file.
+**Full gameplay video (36.5 seconds, with audio):**
+
+<!-- IMPORTANT: Paste the URL created by GitHub when you upload the compressed MP4 in its editor here, alone on its own line. It should begin with https://github.com/user-attachments/assets/ . Do not wrap it in Markdown link syntax. -->
+
+**[▶ Open or download the MP4](media/nightfall-gameplay-highlights.mp4)**
+
+The video includes exploration, enemy encounters, movement, aiming, shooting, and traversal through the barn. The animated preview plays without sound; the full MP4 includes audio.
 
 ## Gameplay and technical systems
 
 | Area | Implementation |
 | --- | --- |
-| **Animation** | Idle/walk/run Blend Space, jump state, animation montages and notifies, Aim Offset, and upper-body layered blends |
-| **Character** | Third-person controls, a human survival-character Skeletal Mesh, animation compatibility and retargeting |
-| **Enemy AI** | AI Controller, Behaviour Tree, Blackboard, AI Perception, navigation, random patrol destinations, and player pursuit |
-| **Combat** | Pistol attachment, camera-based line trace, hit detection, `Apply Damage`, health and enemy elimination |
-| **Aiming / UI** | Right-mouse ADS, Timeline camera transition, Spring Arm length and socket-offset interpolation, on-screen crosshair |
-| **Audio** | MetaSound gunshot with randomized pitch |
+| **Animation** | Idle/walk/run Blend Space, jump state, montages, animation notifies, Aim Offset, and upper-body layered blends |
+| **Player character** | Third-person controls, human survival-character Skeletal Mesh, and integration with existing animation systems |
+| **Enemy AI** | AI Controller, Behaviour Tree, Blackboard, AI Perception, navigation, random patrol locations, and player pursuit |
+| **Combat** | Pistol attachment, camera-based line tracing, hit detection, `Apply Damage`, enemy health, and elimination |
+| **Aiming and UI** | Right-mouse ADS, Timeline-driven camera transitions, Spring Arm interpolation, and an on-screen crosshair |
+| **Audio** | MetaSound pistol firing effect with pitch variation |
 | **Blueprint communication** | Event Dispatchers for gameplay interactions and training targets |
-| **Level design integration** | Imported ready-made barn scene with player and AI placed into a playable level |
+| **Environment integration** | Ready-made barn environment adapted into a playable combat and AI test level |
 
 ## Selected gameplay screenshots
 
-| Combat encounter | Barn interior |
+| Enemy encounter | Barn interior |
 | --- | --- |
-| ![Player confronts an enemy](screenshots/02-enemy-encounter.jpg) | ![Playable barn interior](screenshots/04-barn-interior.jpg) |
+| ![Player confronting an enemy](screenshots/02-enemy-encounter.jpg) | ![Barn interior gameplay scene](screenshots/04-barn-interior.jpg) |
+
+![Enemy engagement during gameplay](screenshots/06-enemy-engagement.jpg)
 
 ## Key Blueprint assets
 
-- `BP_ThirdPersonCharacter` — player controls, aiming, line trace and damage application
-- `ABP_Lab_Basico` — animation state and layered character animation
-- `BP_EnemyCharacter` — enemy health and damage response
-- `BP_EnemyAIController`, `BT_Enemy`, `BB_Enemy` — AI detection and decisions
-- `BTT_FindPatrolLocation` — navigable random patrol targets
-- `TL_CameraAim` — camera transition for aiming
-- `WBP_Crosshair` — crosshair UI
+- `BP_ThirdPersonCharacter` — player movement, aiming, camera trace, and damage application
+- `ABP_Lab_Basico` — animation state logic and layered character animation
+- `BP_EnemyCharacter` — enemy health, damage response, and elimination
+- `BP_EnemyAIController`, `BT_Enemy`, `BB_Enemy` — AI perception and behavior decisions
+- `BTT_FindPatrolLocation` — randomly selected navigable patrol targets
+- `TL_CameraAim` — smooth aim camera transitions
+- `WBP_Crosshair` — aiming reticle widget
 - `MSS_Pistol_Fire` — gunshot MetaSound
 
 ## Technology and scope
 
-- **Engine:** Unreal Engine 5.8.x (local development version 5.8.3)
-- **Implementation:** Blueprints (no custom C++ in this prototype)
-- **Target:** Windows / desktop prototype, tested locally in Unreal Editor
-- **Status:** Learning project and playable technical showcase, **not** a complete commercial game
+- **Engine:** Unreal Engine 5.8.3 (local development)
+- **Implementation:** Blueprints; no custom C++ in this prototype
+- **Platform:** Windows desktop; locally tested in Unreal Editor
+- **Status:** Playable learning prototype and portfolio showcase, not a commercial release
 
 ## Third-party assets and licensing
 
-The environment, survival character and certain audiovisual assets come from third-party content packages. Rights remain with the respective creators. My contribution is the Blueprint-based integration and gameplay logic described above. To respect those licenses, this public repository intentionally **does not contain** the original mesh, texture, audio, animation, map or other licensed `.uasset` files, and it is **not a redistribution of the full game project**.
+The barn environment, survival character, and some audiovisual assets were created by third-party artists and remain subject to their respective licenses. My contribution is the Blueprint implementation, integration, and gameplay logic described above.
+
+To respect third-party licenses, this public repository intentionally does **not** redistribute those packages, meshes, textures, animations, sounds, or other licensed `.uasset` files. The repository contains portfolio documentation and gameplay media rather than a full Unreal Engine project.
 
 ## Developer
 
