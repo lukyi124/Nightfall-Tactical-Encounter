@@ -6,7 +6,7 @@
 
 ![Nightfall player character standing in front of the barn](screenshots/01-barn-character.jpg)
 
-**[▶ Watch the 36-second gameplay highlights](media/nightfall-gameplay-highlights.mp4)** | [More gameplay screenshots](screenshots/) | [Technical implementation](docs/technical-overview.md)
+**[▶ Watch or download the 36-second gameplay highlights (MP4)](https://raw.githubusercontent.com/lukyi124/Nightfall-Tactical-Encounter/main/media/nightfall-gameplay-highlights.mp4)** | [More gameplay screenshots](screenshots/)
 
 ## About the project
 
@@ -18,9 +18,11 @@ The internal Unreal project was developed under the working name `Animation_Prot
 
 ## Gameplay footage
 
-[![Gameplay preview - third-person encounter](screenshots/06-enemy-engagement.jpg)](media/nightfall-gameplay-highlights.mp4)
+[![Gameplay preview - third-person encounter](screenshots/06-enemy-engagement.jpg)](https://raw.githubusercontent.com/lukyi124/Nightfall-Tactical-Encounter/main/media/nightfall-gameplay-highlights.mp4)
 
-**[Watch the edited MP4 (36.5 s)](media/nightfall-gameplay-highlights.mp4)** — selected scenes from the original recorded gameplay, including the environment, enemy encounters, movement, aiming and barn traversal.
+**[▶ Open the edited gameplay video (MP4, 36.5 seconds)](https://raw.githubusercontent.com/lukyi124/Nightfall-Tactical-Encounter/main/media/nightfall-gameplay-highlights.mp4)**
+
+The gameplay highlights feature the environment, enemy encounters, movement, aiming, shooting, and barn traversal. Depending on your browser, the video may play directly or download as an MP4 file.
 
 ## Gameplay and technical systems
 
@@ -41,16 +43,6 @@ The internal Unreal project was developed under the working name `Animation_Prot
 | --- | --- |
 | ![Player confronts an enemy](screenshots/02-enemy-encounter.jpg) | ![Playable barn interior](screenshots/04-barn-interior.jpg) |
 
-## Selected Blueprint graphs
-
-**Camera-based shooting trace**
-
-![The camera-based line trace graph](docs/blueprints/line_trace_camera.png)
-
-**Crosshair widget setup**
-
-![The crosshair widget design](docs/blueprints/crosshair_widget.png)
-
 ## Key Blueprint assets
 
 - `BP_ThirdPersonCharacter` — player controls, aiming, line trace and damage application
@@ -61,8 +53,6 @@ The internal Unreal project was developed under the working name `Animation_Prot
 - `TL_CameraAim` — camera transition for aiming
 - `WBP_Crosshair` — crosshair UI
 - `MSS_Pistol_Fire` — gunshot MetaSound
-
-See [docs/technical-overview.md](docs/technical-overview.md) for more detail, and [docs/final-checklist.md](docs/final-checklist.md) for the local testing checklist.
 
 ## Technology and scope
 
