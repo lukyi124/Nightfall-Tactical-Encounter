@@ -57,6 +57,30 @@ The video includes exploration, enemy encounters, movement, aiming, shooting, an
 
 ![Enemy engagement during gameplay](screenshots/06-enemy-engagement.jpg)
 
+
+## Selected Blueprint graphs
+
+### Camera-based shooting — Line Trace
+
+This Blueprint demonstrates camera-based hit detection and the shooting logic implemented for the player character.
+
+![Camera-based Line Trace Blueprint](docs/blueprints/line_trace_camera.png)
+
+### Crosshair Widget — UMG
+
+This widget provides the aiming crosshair used by the third-person aiming system.
+
+![Crosshair Widget Blueprint](docs/blueprints/crosshair_widget.png)
+
+## Technical documentation
+
+For a closer look at the Blueprint implementation and gameplay architecture:
+
+- [Technical Overview — Animation, AI, Combat and Aiming](docs/technical-overview.md)
+- [Project Validation and Testing Checklist](docs/final-checklist.md)
+
+
+
 ## Key Blueprint assets
 
 - `BP_ThirdPersonCharacter` — player movement, aiming, camera trace, and damage application
